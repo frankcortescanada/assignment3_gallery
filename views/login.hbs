@@ -1,0 +1,36 @@
+
+<!-- login.hbs
+Author: Frank Cortes
+WEB322 Assigment 3
+https://
+ -->
+
+
+<h1>Frank Cortes</h1>
+
+<form method="post" action="/login">
+
+<div class="clslogincontent">
+
+<h3>Login</h3>
+<br>
+
+<input id="txtUserName" name="username" type="text" placeholder="Username" required />
+<br />
+
+<input id="txtPassword" name="password" type="password" placeholder="Password" required />
+<br />
+
+<button id="btnLogin" type="submit">Submit</button>
+<br>
+
+<a id="aRegister" href="/">Register</a>
+<br>
+
+{{#if error}}
+<label id="lblMessage">{{error}}</label>
+{{/if}}
+
+</div>
+
+</form>

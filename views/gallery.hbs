@@ -1,0 +1,57 @@
+<!-- WEB322 - Assignment 3 Gallery -->
+<!-- Author: Francisco Cortes - Web Programming Tools and Frameworks -->
+
+
+{{> header}}
+
+<form id="frmGallery" class="clsForm" method="post" action="/">
+
+  
+  <div class="clsSelection">
+
+    <select name="rdoImage">     
+      <option value="" disabled selected> </option>
+      {{#each images}}
+        <option value="{{this.filename}}" 
+          {{#ifEquals ../selectedImageName this.filename}}selected{{/ifEquals}}>
+          {{this.filename}}
+        </option>
+      {{/each}}
+    </select>
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+  </div>
+  
+  <div class="clsContent">
+
+    <img id="bigImage"
+         src="/images/{{selectedImageName}}"
+         alt="{{selectedImageName}}"
+         onclick="goPurchase()">
+
+  </div>
+
+    <div class="clsImageName">
+    {{selectedImageLabel}}
+  </div>
+
+   <div class="clsUsernameLogout">
+    <div id="divUsername">{{email}}</div>
+    <div id="divLogout">
+        <a id="aLogout" href="/logout">Logout</a>
+    </div>
+  </div>
+
+</form>
+
+<script>
+function goPurchase() {
+  const selected = document.querySelector('select[name="rdoImage"]');
+  if (selected && selected.value && selected.value !== "Galleria.jpg") {
+    window.location.href = "/purchase/" + selected.value;
+  }
+}
+</script>

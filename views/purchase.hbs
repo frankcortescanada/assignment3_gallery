@@ -1,0 +1,29 @@
+
+
+<!-- WEB322 - Assignment 3 Gallery -->
+<!-- Author: Francisco Cortes - Web Programming Tools and Frameworks -->
+
+<form id="frmPurchase" class="clsForm" method="post" action="/purchase/{{image.filename}}">
+
+    <div class="purchase-header-wrapper">
+    {{> header}}
+</div>
+
+    <div class="clsContent clsPurchaseContent">
+
+        <div class="purWrapper1">
+            <img class="thumbnail" src="/images/{{image.filename}}" alt="NO IMAGE">
+        </div>
+
+        <p>{{image.filename}}</p>
+        <p>{{image.description}}</p>
+        <p>CAD {{image.price}}</p>
+
+        <br>
+
+        <button class="btnBuy" type="submit" name="action" value="BUY">Buy</button>
+        <button class="btnCancel" type="submit" name="action" value="CANCEL">Cancel</button>
+
+    </div>
+
+</form>

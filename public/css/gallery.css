@@ -1,0 +1,257 @@
+
+/* WEB322 - Assignment 3 Gallery */
+/* Author: Francisco Cortes - Web Programming Tools and Frameworks */
+
+
+
+																									/*	General Styling Rules	*/
+*
+{
+	font-family: calibri, arial, "times new roman";
+	font-size: 1.1em;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: transparent;
+}
+button
+{
+	background-color: transparent;
+	border: 3px double #bfeeee;
+	width: 200px;
+}
+button:hover
+{
+	background-color: #0f0;
+    color: #ffffff;
+}
+h1, h2, h3, h4
+{
+	color: #7b9b9b;
+    text-align: center;
+}
+h1
+{
+	font-size: 2em;
+	
+}
+h3
+{
+	font-size: 1.5em;
+}
+																										/*	Styling Rules: gallery	*/
+.clsForm
+{
+	border: 0px solid #ff0000;
+	height: 540px;
+	left: 0;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 40px;
+	width: 900px;			
+}
+.clsContent
+{
+	border: 3px double #bfeeee;
+	border-radius: 2%;
+	height: 380px;
+	left: 0;
+	margin: 0 auto;
+	padding-top: 20px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 60px;
+	width: 400px;		
+}
+.clsImageName
+{
+	border: 0px solid #22bfee;
+	bottom: 0;
+	color: #7b9b9b;
+	height: 20px;
+	left: 0;
+	margin: 2em auto;
+	padding: 1vh;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	width: 400px;		
+}
+div.clsSelection
+{
+	border: 0px solid #0f0;
+	height: 400px;
+	margin: 0;
+	position: absolute;
+	text-align: left;
+	top: 60px;
+	width: 200px;		
+}
+div.clsUsernameLogout
+{
+	border: 0px solid #00f;
+	height: 20px;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	text-align: left;
+    top: 60px;
+	width: 200px;			
+}
+div#divUsername
+{
+    color: rgb(123, 155, 155);	
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    transition: opacity 1s ease-out; 
+	white-space: nowrap;   
+}
+div#divLogout
+{
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+a#aLogout
+{
+    color: rgb(0, 0, 199);
+    opacity: 0;	
+    text-decoration: underline;
+    transition: opacity 1s ease-in;        
+}
+div.clsUsernameLogout:hover div#divUsername
+{
+    opacity: 0;
+}
+div.clsUsernameLogout:hover a#aLogout
+{
+    opacity: 1;	
+}
+img
+{
+	height: 360px;
+	left: 0;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	width: 360px;
+}
+select
+{
+	border: 1px solid #bfeeee;
+	background-color: #bfeeee;
+	color: #7b9b9b;
+	float: right;
+	height: 1.5em;
+	margin: 0;
+	width: 200px;
+}
+input[type="text"], input[type="password"], input[type="email"]
+{
+	margin-bottom: 5px;
+    width: 450px;
+}
+input[type="email"]:invalid		
+{
+	color: #f00;
+}
+
+																														/*	Styling Rules: login	*/
+a#aRegister
+{
+	background-color: #9bbbbb;
+	border: 0px solid #bfeeee;
+	color: #ffffff;
+	display: inline-block;
+	font: 1.1em calibri;
+	margin-bottom: 5px;
+	text-align: center;
+	text-decoration: none;
+	width: 450px;	
+}	
+
+button#btnLogin
+{
+	margin-bottom: 5px;
+	width: 450px;
+}
+div.clslogincontent
+{
+	border: 3px double #bfeeee;
+	border-radius: 5px;
+	height: 320px;
+	left: 0;
+    margin: 0 auto;
+	padding: 6px 3px 6px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+    top: 10vh;
+    width: 540px;		
+}
+label#lblMessage
+{
+	background-color: #bfeeee;
+	display: inline-block;
+	font: 0.9em calibri;	
+	margin-bottom: 5px;	
+	width: 450px;	
+}
+
+																														/*	Styling Rules: register	*/
+button#btnRegister
+{
+	float: none;
+	margin-bottom: 5px;
+	width: 450px;
+}
+div.clsregistercontent
+{
+	border: 3px double #bfeeee;
+	border-radius: 2%;
+    margin: 3vh auto;
+	padding: 2vh 1vh 5vh;
+    text-align: center;
+    top: 10vh;
+    width: 540px;		
+}
+																															/*	Styling Rules: purchase	*/
+img.thumbnail
+{
+	height: 150px;
+	left: 0;
+    margin: 0 auto;
+    right: 0;
+	width: 150px;
+}
+button.btnBuy
+{
+    bottom: 5px;
+	left: 80px;
+    position: absolute;
+    width: 100px;
+}
+button.btnCancel
+{
+    bottom: 5px;
+    right: 80px;
+    position: absolute;
+	width: 100px;
+}
+.purWrapper1
+{
+    border: 0px solid #ff0000;
+    height: 180px;
+    margin-bottom: 10px;
+}
+.purchase-header-wrapper {
+    position: relative;
+    top: -40px;   
+}
