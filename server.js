@@ -13,7 +13,7 @@ const mongoose = require('mongoose');                                           
 const purchaseRoutes = require("./purchase");                                                                                               // Import purchase routes
 
 const app = express();                                                                                                                      // Create express app
-const PORT = 3000;                                                                                                                          // Define the port
+const PORT = process.env.PORT || 3000;                                                                                                                          // Define the port
 
                                                                                                                                                 // MongoDB Atlas Connection
 const mongoDB = "mongodb+srv://fcortesgarcia_db_user:nrbFqLUckClHlwwd@mongodbatlas.uqglfen.mongodb.net/web322DB?retryWrites=true&w=majority";  // MongoDB Atlas connection string
